@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Robot</title>
+    <link rel="stylesheet" type="text/css" href="css/robot.css">
+</head>
+<body>
+    <nav>
+        <img id="boxIcon" src="images/toolbox.png" alt="toolbox">
+        <div class="toolBar">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div>
+            <img id="closeTool" src="images/cross.png" alt="exit tool">
+          </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <section>
+        <div class="layer1" id="bubble"></div>
+        <div class="layer2" ></div>
+        
+        <div class="robotLog">
+            <h4>Command Log</h4>
+            <div class="robotMessage">robot message</div>
+            <input id="commandLine" type="text" placeholder="enter a command" />
+            <input id="sendCommand" type="button" value="Send" />
+        </div>
+
+            <div class="burnRobot">
+                <img id="brokenRobot" src="images/robot_repair.png" alt="broken robot">
+                <img class="fire" id="fire1" src="images/fire.png" alt="fire">
+                <img class="fire" id="fire2" src="images/fire.png" alt="fire">
+                <img class="fire" id="fire3" src="images/fire.png" alt="fire">      
+           </div>
+          <div class="robotBtm">
+                  <img id="robotBody" src="images/robot_transparent_03.gif" height="200px" width="200px" alt="robot body">
+          </div>
+          <div class="bigRobot">
+              <img id="giantFace" src="images/robot_transparent_03.gif" width="800px" height="1000px" alt="giant face">
+          </div>
+          <div class="robotSpeak start">
+              <p id="lines"></p>
+          </div>
+    </section>
+    </div>
+
+        
+    <script src="js/jquery.js"></script>
+    <script src="js/robot.js"></script>
+</body>
+</html>
