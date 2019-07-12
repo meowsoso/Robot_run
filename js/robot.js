@@ -13,6 +13,7 @@ $(".layer1").hide();
 let dialogueCount = 0;
 let eventStatus = 'start';
 let fireCount = 0;
+let torch = 'off';
 
 // libaray to store robot response 
 const robotDialogue = {
@@ -27,17 +28,14 @@ const robotDialogue = {
             'Oh noooooo, it"s the 99% cur ^$!^  ssssss @&)@#>? e!%@%!^', 
             'It must be the damn virus , please input Kaspersky to activate antivirus'
           ],
-  puzzle3: [
-
-  ]
-
-}
+  puzzle3: []
+};
 
 
 // spot light effect
 $(document).on("click mousemove", "body", function(e) {
-  if ($('div.toolBar').attr('class') === 'toolBar showTool') {
-    $(".layer1").fadeIn(800);
+  if ($('div#torchLight').attr('class') === 'light') {
+    $(".layer1").fadeIn('slow');
     const x = e.clientX;
     const y = e.clientY;
     const newposX = x - 100;
@@ -45,6 +43,17 @@ $(document).on("click mousemove", "body", function(e) {
     $(".layer1").css({"left": `${newposX}px`, "top": `${newposY}px`});
 };
 });
+
+// torch icon to switch or off
+$('div#torchLight').on('click', function () {
+  if ($(this).attr('class') === 'light') {
+    $(this).removeClass('light');
+    $('.layer1').fadeOut('slow');
+  } else {  
+  console.log('click')
+  $(this).addClass('light');
+  };
+})
 
 // item slot toggling
 $('#boxIcon').on('click', function() {
@@ -59,21 +68,12 @@ $('#closeTool').on('click', function() {
     $(this).css('visibility', 'hidden');
 });
 
-
-
-// TODO
-// input: user message. Outout: robot reply
-const robotReply = function(string) {
-}
-
-
 //clean message log
 const cleanLog = function () {
   if ($('div.robotMessage > p').length >4) {
     $('div.robotMessage').find('p:eq(1)').remove();
     };
 };
-
 
 // puzzle#1 scramble word orders and swap the letters inside 
 
@@ -130,17 +130,23 @@ const swapWords = function (sentence) {
   }
   return newSentence.join(' ');
 };
+
+////////////////// end of puzzle1 logic
+
+
 //put out fire
 $('img.fire').on('click', function () {
   $(this).fadeOut(4000);
   fireCount += 1;
 });
 
+//borken robot disappear
 $('img#brokenRobot').on('click', function () {
   if (fireCount >= 3) {
   $(this).fadeOut(3000, "swing", bigRobotFadeIn);
   };
 });
+
 //fade in big Robot
 const bigRobotFadeIn = function () {
 $('div.bigRobot').animate({
@@ -207,6 +213,7 @@ $('input#sendCommand').on('click', function (){
   };
 });
 
+// event dialogue for puzzle 2
 $('div.start').on('click', function () {
   // debugger;
   if (dialogueCount < 4 && eventStatus === 'puzzle2') {

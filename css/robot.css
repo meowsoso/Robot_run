@@ -5,8 +5,6 @@
 body {
     margin: 0;
     padding: 0;
-    /* border: 1px solid yellow;    */
-    /* background-color: black; */
 }
 
 section {
@@ -107,6 +105,15 @@ img#closeTool {
   top: 40px;
   right: 2%;
   z-index: 2;
+}
+
+div.showTool #torchLight {
+  background-image: url('./../images/idea.png');
+  background-size: cover;
+  height: 60px;
+  width: 60px;
+  display: flexbox;
+  margin: 0 auto;
 }
 
 
@@ -228,9 +235,6 @@ div.bigRobot {
   vertical-align: bottom;
   width: 70%;
   height: 40%;
-  /* visibility: hidden; */
-  /* transition: 5s; */
-
 }
 
 img#giantFace {
