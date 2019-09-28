@@ -1,92 +1,110 @@
+@import url("https://fonts.googleapis.com/css?family=Coda+Caption:800");
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+#intro__container {
+  left: 50%;
+  top: 50%;
+  width: 40vw;
+  height: 30vh;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  background-color: rgba(25, 54, 78, 0.5);
+  border-radius: 0.5em;
+}
+#logo {
+  width: 100%;
+  height: 100%;
 }
 
 section {
-    width: 100%;
-    max-height: 120vh;
+  width: 100%;
+  max-height: 120vh;
 }
 
 section .layer2 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url("./../images/thebridge.jpg");
-    background-attachment: fixed;
-    background-position: center;
-    filter: brightness(25%);
-    transition: 2s;
-    z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("./../images/thebridge.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  filter: brightness(25%);
+  transition: 2s;
+  z-index: -1;
 }
 
 section .layer1 {
-    position: absolute;
-    top: 100px;
-    left: 100px;
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    background: url("./../images/thebridge.jpg");
-    background-position: center;
-    background-attachment: fixed;
-    z-index: 0;
-    filter: sepia(1) contrast(2) brightness(90%);
-    /* animation: lightChange 5s infinite; */
+  position: absolute;
+  top: 100px;
+  left: 100px;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: url("./../images/thebridge.jpg");
+  background-position: center;
+  background-attachment: fixed;
+  z-index: 0;
+  filter: sepia(1) contrast(2) brightness(90%);
+  /* animation: lightChange 5s infinite; */
 }
 
 @keyframes lightChange {
-    0% {
-        filter: brightness(50%);
-    }
-    40% {
-        filter: contrast(2) brightness(70%);
-    }
-    50% {
-        filter: contrast(3) brightness(140%);
-    }
-    60% {
-        filter: sepia(1) contrast(3) brightness(140%);
-    }
-    80% {
-        filter: contrast(2) brightness(70%);
-    }
-    100% {
-        filter: brightness(50%);
-    }
-} 
+  0% {
+    filter: brightness(50%);
+  }
+  40% {
+    filter: contrast(2) brightness(70%);
+  }
+  50% {
+    filter: contrast(3) brightness(140%);
+  }
+  60% {
+    filter: sepia(1) contrast(3) brightness(140%);
+  }
+  80% {
+    filter: contrast(2) brightness(70%);
+  }
+  100% {
+    filter: brightness(50%);
+  }
+}
 
 nav #boxIcon {
-    position: absolute;
-    left: 93%;
-    top: 45%;
-    z-index: 5; 
-    background-color: yellow;
-    height: 60px;
-    width: 60px;
+  position: absolute;
+  left: 93%;
+  top: 45%;
+  z-index: 5;
+  background-color: yellow;
+  height: 60px;
+  width: 60px;
 }
 
 .toolbar {
-    background-color: rgba(14, 24, 32, 0.5);
-    width: 90px;
-    height: 90%;
-    display: none;
-    transition: 1s;
-    position: fixed;
-    top: 40px;
-    right: 2%;
-    z-index: 2;
+  background-color: rgba(14, 24, 32, 0.5);
+  width: 90px;
+  height: 90%;
+  display: none;
+  transition: 1s;
+  position: fixed;
+  top: 40px;
+  right: 2%;
+  z-index: 2;
 }
 
 img#closeTool {
   height: 27px;
-  width:  25px;
+  width: 25px;
   position: fixed;
   display: flexbox;
   visibility: hidden;
@@ -108,7 +126,7 @@ img#closeTool {
 }
 
 div.showTool #torchLight {
-  background-image: url('./../images/idea.png');
+  background-image: url("./../images/idea.png");
   background-size: cover;
   height: 60px;
   width: 60px;
@@ -116,12 +134,9 @@ div.showTool #torchLight {
   margin: 0 auto;
 }
 
-
-
-
 div.robotLog {
   background-color: rgba(101, 105, 102, 0.6);
-  border: 1px solid #295A33;
+  border: 1px solid #295a33;
   padding: 1px;
   height: 35%;
   width: 30%;
@@ -135,7 +150,7 @@ div.robotMessage {
   background-color: black;
   color: green;
   height: 70%;
-  margin: 0px 2px, 1px, 2px;  
+  margin: 0px 2px, 1px, 2px;
   line-height: 1em;
 }
 
@@ -150,7 +165,7 @@ h4 {
   padding: 0;
   margin: 0px;
   text-align: center;
-} 
+}
 
 input#commandLine {
   width: 80%;
@@ -258,10 +273,138 @@ div.robotSpeak p {
   line-height: 1em;
   text-align: center;
   color: greenyellow;
-  animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
+  animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
 }
 
 @keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.fas {
+  color: pink;
+}
+
+div.robotParts {
+  display: none;
+  position: absolute;
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  padding: 45px;
+  border: 2px yellow solid;
+  z-index: 8;
+  opacity: 0;
+  transition: 3s;
+}
+
+div.squirrel {
+  display: inline-block;
+  position: absolute;
+  color: yellow;
+  width: 80px;
+  height: 80px;
+  z-index: 6;
+}
+
+/* robot run title */
+.title {
+  margin-top: 20vh;
+  text-align: center;
+  font-family: "Coda Caption", sans-serif;
+  font-weight: 800;
+  font-size: calc(
+    20vw / var(--word-total)
+  ); /* Overriden below for fluid typography test */
+  line-height: 1;
+  letter-spacing: -0.03em;
+  transform: perspective(300px) scaleY(1.6) rotateX(-45deg);
+  transform-style: preserve-3d; /* Important for establishing a shared 3D space for all the layers */
+  --layer-depth: 0.32em;
+}
+
+.start__button {
+  display: inline-block;
+  position: absolute;
+  left: 50%;
+  margin-top: 10vh;
+  margin-left: -1.25em;
+  font-size: 2em;
+  color: yellow;
+  text-shadow: 0.06em 0 black, 0.06em 0.06em black, 0 0.06em black,
+    -0.06em 0.06em black, -0.06em 0 black, -0.06em -0.06em black,
+    0 -0.06em black, 0.06em -0.06em black;
+  background-color: rgba(32, 124, 185, 0.5);
+  width: 2.5em;
+  height: 1.3em;
+  text-align: center;
+  border-radius: 0.5em;
+  z-index: 6;
+}
+/* The front layer are yellow words with a thick black stroke outline */
+.title .word {
+  position: relative;
+  display: inline-block;
+  color: yellow;
+  font-size: calc(
+    ((var(--line-index) + 1) * 25%) + 50%
+  ); /* We skew font-sizes to avoid emphasize on the top, due to perspective rotation */
+  text-shadow: 0.06em 0 black, 0.06em 0.06em black, 0 0.06em black,
+    -0.06em 0.06em black, -0.06em 0 black, -0.06em -0.06em black,
+    0 -0.06em black, 0.06em -0.06em black;
+  transform-style: preserve-3d; /* Important as above, we need to make sure the pseudos share the same 3D space */
+}
+
+/* The back layers are two pseudos, we pull content through via Splitting.js! */
+.title .word::before,
+.title .word::after {
+  content: attr(data-word);
+  position: absolute;
+  top: auto;
+  left: 0;
+  bottom: 0;
+  display: block;
+  pointer-events: none;
+}
+
+/* Red layer immediately behind the yellow, thinner stroke outline */
+.title .word::before {
+  color: red;
+  text-shadow: 0.02em 0 black, 0.02em 0.02em black, 0 0.02em black,
+    -0.02em 0.02em black, -0.02em 0 black, -0.02em -0.02em black,
+    0 -0.02em black, 0.02em -0.02em black;
+  transform: translateZ(calc(var(--layer-depth) * -0.5));
+}
+
+/* Furthest layer, just simple black lettering with no outline */
+.title .word::after {
+  color: rgba(116, 187, 126, 0.4);
+  text-shadow: none;
+  transform: translateZ(calc(var(--layer-depth) * -1));
+}
+
+/* Testing Fluid Typography with CSS Variables – Broke on Safari though? */
+.title {
+  --min-font-size: 64;
+  --max-font-size: 128;
+  font-size: calc(var(--min-font-size) * 1px);
+}
+
+@media screen and (min-width: 320px) {
+  .title {
+    font-size: calc(
+      var(--min-font-size) * 1px + (var(--max-font-size) - var(--min-font-size)) *
+        ((100vw - 320px) / 680)
+    );
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .title {
+    font-size: calc(var(--max-font-size) * 1px);
+  }
 }

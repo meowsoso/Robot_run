@@ -1,61 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Robot</title>
-    <link rel="stylesheet" type="text/css" href="css/robot.css">
-</head>
-<body>
+    <link rel="stylesheet" type="text/css" href="css/robot.css" />
+  </head>
+  <body>
     <nav>
-        <img id="boxIcon" src="images/toolbox.png" alt="toolbox">
-        <div class="toolBar">
-            <div id="torchLight" class=""></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div>
-            <img id="closeTool" src="images/cross.png" alt="exit tool">
-          </div>
+      <img id="boxIcon" src="images/toolbox.png" alt="toolbox" />
+      <div class="toolBar">
+        <div id="torchLight" class=""></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div>
+          <img id="closeTool" src="images/cross.png" alt="exit tool" />
         </div>
+      </div>
     </nav>
 
     <div class="container">
-        <section>
+      <div id="intro__container">
+        <svg id="logo">
+          <path fill="none" d="" />
+        </svg>
+      </div>
+      <section>
         <div class="layer1" id="bubble"></div>
-        <div class="layer2" ></div>
-        
+        <div class="layer2"></div>
+
         <div class="robotLog">
-            <h4>Command Log</h4>
-            <div class="robotMessage">robot message</div>
-            <input id="commandLine" type="text" placeholder="enter a command" />
-            <input id="sendCommand" type="button" value="Send" />
+          <h4>Command Log</h4>
+          <div class="robotMessage">robot message</div>
+          <input id="commandLine" type="text" placeholder="enter a command" />
+          <input id="sendCommand" type="button" value="Send" />
         </div>
 
-            <div class="burnRobot">
-                <img id="brokenRobot" src="images/robot_repair.png" alt="broken robot">
-                <img class="fire" id="fire1" src="images/fire.png" alt="fire">
-                <img class="fire" id="fire2" src="images/fire.png" alt="fire">
-                <img class="fire" id="fire3" src="images/fire.png" alt="fire">      
-           </div>
-          <div class="robotBtm">
-                  <img id="robotBody" src="images/robot_transparent_03.gif" height="200px" width="200px" alt="robot body">
-          </div>
-          <div class="bigRobot">
-              <img id="giantFace" src="images/robot_transparent_03.gif" width="800px" height="1000px" alt="giant face">
-          </div>
-          <div class="robotSpeak start">
-              <p id="lines"></p>
-          </div>
-    </section>
+        <div class="burnRobot">
+          <img
+            id="brokenRobot"
+            src="images/robot_repair.png"
+            alt="broken robot"
+          />
+          <img class="fire" id="fire1" src="images/fire.png" alt="fire" />
+          <img class="fire" id="fire2" src="images/fire.png" alt="fire" />
+          <img class="fire" id="fire3" src="images/fire.png" alt="fire" />
+        </div>
+        <div class="robotBtm">
+          <img
+            id="robotBody"
+            src="images/robot_transparent_03.gif"
+            height="200px"
+            width="200px"
+            alt="robot body"
+          />
+        </div>
+        <div class="bigRobot">
+          <img
+            id="giantFace"
+            src="images/robot_transparent_03.gif"
+            width="800px"
+            height="1000px"
+            alt="giant face"
+          />
+        </div>
+        <div class="robotSpeak start">
+          <p id="lines"></p>
+        </div>
+        <div class="robotParts">
+          <i class="fas fa-screwdriver fa-2x"></i>
+        </div>
+        <div class="robotParts">
+          <i class="fas fa-screwdriver fa-2x"></i>
+        </div>
+        <div class="robotParts">
+          <i class="fas fa-screwdriver fa-2x"></i>
+        </div>
+        <div class="robotParts">
+          <i class="fas fa-screwdriver fa-2x"></i>
+        </div>
+        <div class="robotParts">
+          <i class="fas fa-screwdriver fa-2x"></i>
+        </div>
+        <div class="squirrel">
+          <i class="fas fa-cat fa-3x"></i>
+        </div>
+      </section>
+      <div class="title" data-splitting="lines">
+        Robot<br />
+        Run
+      </div>
+      <div class="start__button">Start</div>
     </div>
 
-        
+    <script src="https://kit.fontawesome.com/b910263f8d.js"></script>
     <script src="js/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.4.1/snap.svg-min.js"></script>
+    <script src="https://unpkg.com/splitting/dist/splitting.js"></script>
     <script src="js/robot.js"></script>
-</body>
+  </body>
 </html>
