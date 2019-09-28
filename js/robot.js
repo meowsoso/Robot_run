@@ -22,7 +22,16 @@ $("div.start__button").on("click", function() {
   $(this).fadeOut(1000);
   $("#intro__container").fadeIn(3000);
   setTimeout(function() {
-    textEffect("Robot Run");
+    textEffect("You woke up to the sound of explosion.");
+    setTimeout(function() {
+      textEffect("Seems like you are in a control room?", "45%");
+      setTimeout(function() {
+        textEffect("To get out. Look around for clues.", "75%");
+        setTimeout(function() {
+          $("#intro__container").fadeOut(2000);
+        }, 6000);
+      }, 4000);
+    }, 4000);
   }, 3500);
 });
 
@@ -386,12 +395,12 @@ const textEffect = function(text, posY = "15%", fontSize = 30) {
   function generateRandomTitle(i, logoRandom) {
     setTimeout(function() {
       logoTitleContainer.attr({ text: logoRandom });
-    }, i * 150);
+    }, i * 120);
   }
 
-  for (var i = 0; i < logoTitle.length + 1; i++) {
+  for (let i = 0; i < logoTitle.length + 1; i++) {
     logoRandom = logoTitle.substr(0, i);
-    for (var j = i; j < logoTitle.length; j++) {
+    for (let j = i; j < logoTitle.length; j++) {
       logoRandom += possible.charAt(
         Math.floor(Math.random() * possible.length)
       );
