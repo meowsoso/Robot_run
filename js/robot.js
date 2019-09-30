@@ -380,10 +380,10 @@ $("#logo").on("click", function() {
 });
 
 // code text effect
-const textEffect = function(text, posY = "15%", fontSize = 30) {
+const textEffect = function(text, posY = "15%", fontSize = 22) {
   let logoTitle = text;
   let logoRandom = "";
-  let logoTitleContainer = logo.text(0, posY, "");
+  let logoTitleContainer = logo.text("1%", posY, "");
   let possible = '-+*/|}{[]~\\":;?/.><=+-_)(*&^%$#@!)}';
   logoTitleContainer.attr({
     fontSize: fontSize,
